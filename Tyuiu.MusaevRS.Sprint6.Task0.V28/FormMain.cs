@@ -47,8 +47,27 @@ namespace Tyuiu.MusaevRS.Sprint6.Task0.V28
             }
             catch
             {
-                MsssageBox.
+                MessageBox.Show("Введены неверные данные", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void textBoxInPut_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBoxInPut_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar<= 47 || e.KeyChar>=58) && (e.KeyChar != ',') && (e.KeyChar != 8))
+            {
+                e.Handled = true;
+            }
+
+        }
+
+        private void buttonHelp_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Task 0 выполнил студент ПКТБ 23-2 Мусаев Руслан");
         }
     }
 }

@@ -10,6 +10,10 @@ namespace Tyuiu.MusaevRS.Sprint6.Task0.V28.Test
         [TestMethod]
         public void TestMethod1()
         {
+            DataService ds = new DataService();
+            double res = ds.Calculate(3);
+            double wait = 169.89;
+            Assert.AreEqual(wait, res);
         }
     }
 }

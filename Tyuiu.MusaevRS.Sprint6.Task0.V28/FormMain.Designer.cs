@@ -41,6 +41,8 @@ namespace Tyuiu.MusaevRS.Sprint6.Task0.V28
             this.TextBoxResult = new System.Windows.Forms.TextBox();
             this.LabelOut = new System.Windows.Forms.Label();
             this.buttonMain = new System.Windows.Forms.Button();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.buttonHelp = new System.Windows.Forms.Button();
             this.groupBoxMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMain)).BeginInit();
             this.groupBoxInPut.SuspendLayout();
@@ -97,7 +99,7 @@ namespace Tyuiu.MusaevRS.Sprint6.Task0.V28
             // labelX
             // 
             this.labelX.AutoSize = true;
-            this.labelX.Location = new System.Drawing.Point(55, 37);
+            this.labelX.Location = new System.Drawing.Point(34, 36);
             this.labelX.Name = "labelX";
             this.labelX.Size = new System.Drawing.Size(82, 13);
             this.labelX.TabIndex = 2;
@@ -105,10 +107,12 @@ namespace Tyuiu.MusaevRS.Sprint6.Task0.V28
             // 
             // textBoxInPut
             // 
-            this.textBoxInPut.Location = new System.Drawing.Point(58, 53);
+            this.textBoxInPut.Location = new System.Drawing.Point(37, 53);
             this.textBoxInPut.Name = "textBoxInPut";
             this.textBoxInPut.Size = new System.Drawing.Size(100, 20);
             this.textBoxInPut.TabIndex = 0;
+            this.textBoxInPut.TextChanged += new System.EventHandler(this.textBoxInPut_TextChanged);
+            this.textBoxInPut.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxInPut_KeyPress);
             // 
             // groupBoxOutPut
             // 
@@ -126,7 +130,6 @@ namespace Tyuiu.MusaevRS.Sprint6.Task0.V28
             this.TextBoxResult.Location = new System.Drawing.Point(54, 52);
             this.TextBoxResult.Name = "TextBoxResult";
             this.TextBoxResult.ReadOnly = true;
-            this.TextBoxResult.ShortcutsEnabled = false;
             this.TextBoxResult.Size = new System.Drawing.Size(100, 20);
             this.TextBoxResult.TabIndex = 0;
             this.TextBoxResult.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
@@ -142,7 +145,7 @@ namespace Tyuiu.MusaevRS.Sprint6.Task0.V28
             // 
             // buttonMain
             // 
-            this.buttonMain.Location = new System.Drawing.Point(623, 297);
+            this.buttonMain.Location = new System.Drawing.Point(623, 281);
             this.buttonMain.Name = "buttonMain";
             this.buttonMain.Size = new System.Drawing.Size(131, 56);
             this.buttonMain.TabIndex = 4;
@@ -150,16 +153,36 @@ namespace Tyuiu.MusaevRS.Sprint6.Task0.V28
             this.buttonMain.UseVisualStyleBackColor = true;
             this.buttonMain.Click += new System.EventHandler(this.buttonMain_Click);
             // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
+            // 
+            // buttonHelp
+            // 
+            this.buttonHelp.AccessibleName = "";
+            this.buttonHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHelp.Location = new System.Drawing.Point(638, 343);
+            this.buttonHelp.Name = "buttonHelp";
+            this.buttonHelp.Size = new System.Drawing.Size(98, 45);
+            this.buttonHelp.TabIndex = 6;
+            this.buttonHelp.Tag = "";
+            this.buttonHelp.Text = "?";
+            this.buttonHelp.UseVisualStyleBackColor = true;
+            this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonHelp);
             this.Controls.Add(this.buttonMain);
             this.Controls.Add(this.groupBoxOutPut);
             this.Controls.Add(this.groupBoxInPut);
             this.Controls.Add(this.groupBoxMain);
             this.Name = "FormMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sprint 6 | Task 0 | MusaevRS | V28";
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.groupBoxMain.ResumeLayout(false);
@@ -186,6 +209,8 @@ namespace Tyuiu.MusaevRS.Sprint6.Task0.V28
         private System.Windows.Forms.Label LabelOut;
         private System.Windows.Forms.TextBox TextBoxResult;
         private System.Windows.Forms.Button buttonMain;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.Button buttonHelp;
     }
 }
 
