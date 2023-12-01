@@ -182,7 +182,7 @@ namespace Tyuiu.MusaevRS.Sprint6.Task1.V1
             this.Controls.Add(this.groupBoxInPut);
             this.Controls.Add(this.groupBoxConditions);
             this.Name = "FormMain";
-            this.Text = "FormMain";
+            this.Text = "Sprint 6 | Task 1 | V1 | MusaevRS";
             this.groupBoxConditions.ResumeLayout(false);
             this.groupBoxConditions.PerformLayout();
             this.groupBoxInPut.ResumeLayout(false);
