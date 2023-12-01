@@ -38,8 +38,8 @@ namespace Tyuiu.MusaevRS.Sprint6.Task0.V28
             this.labelX = new System.Windows.Forms.Label();
             this.textBoxInPut = new System.Windows.Forms.TextBox();
             this.groupBoxOutPut = new System.Windows.Forms.GroupBox();
-            this.TextBoxResult = new System.Windows.Forms.TextBox();
             this.LabelOut = new System.Windows.Forms.Label();
+            this.TextBoxResult = new System.Windows.Forms.TextBox();
             this.buttonMain = new System.Windows.Forms.Button();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.buttonHelp = new System.Windows.Forms.Button();
@@ -125,15 +125,6 @@ namespace Tyuiu.MusaevRS.Sprint6.Task0.V28
             this.groupBoxOutPut.TabStop = false;
             this.groupBoxOutPut.Text = "Вывод данных:";
             // 
-            // TextBoxResult
-            // 
-            this.TextBoxResult.Location = new System.Drawing.Point(54, 52);
-            this.TextBoxResult.Name = "TextBoxResult";
-            this.TextBoxResult.ReadOnly = true;
-            this.TextBoxResult.Size = new System.Drawing.Size(100, 20);
-            this.TextBoxResult.TabIndex = 0;
-            this.TextBoxResult.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
             // LabelOut
             // 
             this.LabelOut.AutoSize = true;
@@ -143,8 +134,18 @@ namespace Tyuiu.MusaevRS.Sprint6.Task0.V28
             this.LabelOut.TabIndex = 1;
             this.LabelOut.Text = "Значение выражения:";
             // 
+            // TextBoxResult
+            // 
+            this.TextBoxResult.Location = new System.Drawing.Point(54, 52);
+            this.TextBoxResult.Name = "TextBoxResult";
+            this.TextBoxResult.ReadOnly = true;
+            this.TextBoxResult.Size = new System.Drawing.Size(100, 20);
+            this.TextBoxResult.TabIndex = 0;
+            this.TextBoxResult.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
             // buttonMain
             // 
+            this.buttonMain.Enabled = false;
             this.buttonMain.Location = new System.Drawing.Point(623, 281);
             this.buttonMain.Name = "buttonMain";
             this.buttonMain.Size = new System.Drawing.Size(131, 56);
