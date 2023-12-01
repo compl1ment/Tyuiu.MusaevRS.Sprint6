@@ -32,15 +32,15 @@ namespace Tyuiu.MusaevRS.Sprint6.Task1.V1
             this.groupBoxConditions = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBoxInPut = new System.Windows.Forms.GroupBox();
+            this.buttonHelp = new System.Windows.Forms.Button();
             this.buttonMain = new System.Windows.Forms.Button();
             this.labelInPutY = new System.Windows.Forms.Label();
             this.LabelInPutX = new System.Windows.Forms.Label();
             this.textBoxY = new System.Windows.Forms.TextBox();
             this.textBoxX = new System.Windows.Forms.TextBox();
-            this.buttonHelp = new System.Windows.Forms.Button();
             this.groupBoxResult = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.textBoxMain = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBoxConditions.SuspendLayout();
             this.groupBoxInPut.SuspendLayout();
             this.groupBoxResult.SuspendLayout();
@@ -84,9 +84,21 @@ namespace Tyuiu.MusaevRS.Sprint6.Task1.V1
             this.groupBoxInPut.TabStop = false;
             this.groupBoxInPut.Text = "Ввод данных:";
             // 
+            // buttonHelp
+            // 
+            this.buttonHelp.BackColor = System.Drawing.SystemColors.Highlight;
+            this.buttonHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHelp.Location = new System.Drawing.Point(301, 37);
+            this.buttonHelp.Name = "buttonHelp";
+            this.buttonHelp.Size = new System.Drawing.Size(86, 36);
+            this.buttonHelp.TabIndex = 1;
+            this.buttonHelp.Text = "?";
+            this.buttonHelp.UseVisualStyleBackColor = false;
+            this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
+            // 
             // buttonMain
             // 
-            this.buttonMain.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.buttonMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.buttonMain.Location = new System.Drawing.Point(406, 23);
             this.buttonMain.Name = "buttonMain";
             this.buttonMain.Size = new System.Drawing.Size(106, 64);
@@ -129,17 +141,6 @@ namespace Tyuiu.MusaevRS.Sprint6.Task1.V1
             this.textBoxX.Size = new System.Drawing.Size(100, 20);
             this.textBoxX.TabIndex = 2;
             // 
-            // buttonHelp
-            // 
-            this.buttonHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonHelp.Location = new System.Drawing.Point(301, 37);
-            this.buttonHelp.Name = "buttonHelp";
-            this.buttonHelp.Size = new System.Drawing.Size(86, 36);
-            this.buttonHelp.TabIndex = 1;
-            this.buttonHelp.Text = "?";
-            this.buttonHelp.UseVisualStyleBackColor = true;
-            this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
-            // 
             // groupBoxResult
             // 
             this.groupBoxResult.Controls.Add(this.textBoxMain);
@@ -150,15 +151,6 @@ namespace Tyuiu.MusaevRS.Sprint6.Task1.V1
             this.groupBoxResult.TabIndex = 2;
             this.groupBoxResult.TabStop = false;
             this.groupBoxResult.Text = "Вывод данных:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Результат:";
             // 
             // textBoxMain
             // 
@@ -171,6 +163,15 @@ namespace Tyuiu.MusaevRS.Sprint6.Task1.V1
             this.textBoxMain.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBoxMain.Size = new System.Drawing.Size(209, 350);
             this.textBoxMain.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Результат:";
             // 
             // FormMain
             // 
