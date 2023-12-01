@@ -67,5 +67,10 @@ namespace Tyuiu.MusaevRS.Sprint6.Task1.V1
         {
             MessageBox.Show("Работу выполнил студент ТИУ группы ПКТБ 23-2 Мусаев Руслан.");
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
