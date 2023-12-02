@@ -80,5 +80,20 @@ namespace Tyuiu.MusaevRS.Sprint6.Task2.V9
         {
 
         }
+
+        private void buttonMain_MouseDown(object sender, MouseEventArgs e)
+        {
+            buttonMain.BackColor = Color.Blue;
+        }
+
+        private void buttonMain_MouseEnter(object sender, EventArgs e)
+        {
+            buttonMain.BackColor = Color.Red;
+        }
+
+        private void buttonMain_MouseLeave(object sender, EventArgs e)
+        {
+            buttonMain.BackColor = Color.Green;
+        }
     }
 }

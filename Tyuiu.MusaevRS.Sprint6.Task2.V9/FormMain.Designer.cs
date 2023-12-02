@@ -29,9 +29,9 @@ namespace Tyuiu.MusaevRS.Sprint6.Task2.V9
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBoxMain = new System.Windows.Forms.GroupBox();
             this.labelMainTwo = new System.Windows.Forms.Label();
             this.labelMainOne = new System.Windows.Forms.Label();
@@ -156,6 +156,9 @@ namespace Tyuiu.MusaevRS.Sprint6.Task2.V9
             this.buttonMain.Text = "Выполнить";
             this.buttonMain.UseVisualStyleBackColor = false;
             this.buttonMain.Click += new System.EventHandler(this.buttonMain_Click);
+            this.buttonMain.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonMain_MouseDown);
+            this.buttonMain.MouseEnter += new System.EventHandler(this.buttonMain_MouseEnter);
+            this.buttonMain.MouseLeave += new System.EventHandler(this.buttonMain_MouseLeave);
             // 
             // button1
             // 
@@ -189,24 +192,24 @@ namespace Tyuiu.MusaevRS.Sprint6.Task2.V9
             this.dataGridViewMain.Location = new System.Drawing.Point(17, 19);
             this.dataGridViewMain.Name = "dataGridViewMain";
             this.dataGridViewMain.RowHeadersVisible = false;
-            this.dataGridViewMain.Size = new System.Drawing.Size(103, 264);
+            this.dataGridViewMain.Size = new System.Drawing.Size(117, 369);
             this.dataGridViewMain.TabIndex = 3;
             this.dataGridViewMain.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // SplineMain
             // 
-            chartArea1.Name = "ChartArea1";
-            this.SplineMain.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.SplineMain.Legends.Add(legend1);
+            chartArea5.Name = "ChartArea1";
+            this.SplineMain.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.SplineMain.Legends.Add(legend5);
             this.SplineMain.Location = new System.Drawing.Point(140, 21);
             this.SplineMain.Name = "SplineMain";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.IsVisibleInLegend = false;
-            series1.Legend = "Legend1";
-            series1.Name = "График функции f(x)";
-            this.SplineMain.Series.Add(series1);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series5.IsVisibleInLegend = false;
+            series5.Legend = "Legend1";
+            series5.Name = "График функции f(x)";
+            this.SplineMain.Series.Add(series5);
             this.SplineMain.Size = new System.Drawing.Size(300, 300);
             this.SplineMain.TabIndex = 4;
             this.SplineMain.Text = "Вывод данных:";
