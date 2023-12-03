@@ -72,5 +72,10 @@ namespace Tyuiu.MusaevRS.Sprint6.Task1.V1
         {
 
         }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

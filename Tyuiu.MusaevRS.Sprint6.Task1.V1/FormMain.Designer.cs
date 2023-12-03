@@ -30,6 +30,7 @@ namespace Tyuiu.MusaevRS.Sprint6.Task1.V1
         private void InitializeComponent()
         {
             this.groupBoxConditions = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBoxInPut = new System.Windows.Forms.GroupBox();
             this.buttonHelp = new System.Windows.Forms.Button();
@@ -41,11 +42,10 @@ namespace Tyuiu.MusaevRS.Sprint6.Task1.V1
             this.groupBoxResult = new System.Windows.Forms.GroupBox();
             this.textBoxMain = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBoxConditions.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBoxInPut.SuspendLayout();
             this.groupBoxResult.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxConditions
@@ -60,6 +60,17 @@ namespace Tyuiu.MusaevRS.Sprint6.Task1.V1
             this.groupBoxConditions.Tag = "";
             this.groupBoxConditions.Text = "Условие";
             this.groupBoxConditions.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Tyuiu.MusaevRS.Sprint6.Task1.V1.Properties.Resources._123;
+            this.pictureBox1.Location = new System.Drawing.Point(9, 32);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(354, 52);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -176,17 +187,6 @@ namespace Tyuiu.MusaevRS.Sprint6.Task1.V1
             this.label2.TabIndex = 0;
             this.label2.Text = "Результат:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Tyuiu.MusaevRS.Sprint6.Task1.V1.Properties.Resources._123;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 32);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(354, 52);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -197,13 +197,14 @@ namespace Tyuiu.MusaevRS.Sprint6.Task1.V1
             this.Controls.Add(this.groupBoxConditions);
             this.Name = "FormMain";
             this.Text = "Sprint 6 | Task 1 | V1 | MusaevRS";
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.groupBoxConditions.ResumeLayout(false);
             this.groupBoxConditions.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBoxInPut.ResumeLayout(false);
             this.groupBoxInPut.PerformLayout();
             this.groupBoxResult.ResumeLayout(false);
             this.groupBoxResult.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
