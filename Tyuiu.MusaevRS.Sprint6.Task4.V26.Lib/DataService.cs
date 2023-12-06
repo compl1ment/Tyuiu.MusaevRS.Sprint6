@@ -18,9 +18,18 @@ namespace Tyuiu.MusaevRS.Sprint6.Task4.V26.Lib
             int count = 0;
             for (int x = startValue; x < stopValue; x++)
             {
-                y = Math.Round((5 - 3 * x + ((1 + Math.Sin(x)) / (2 * x - 0.5))), 2);
-                valueArray[count] = y;
-                count++;
+                if (2*x - 0.5 != 0)
+                {
+                    y = Math.Round((5 - 3 * x + ((1 + Math.Sin(x)) / (2 * x - 0.5))), 2);
+                    valueArray[count] = y;
+                    count++;
+                }              
+                else
+                {
+                    y = 0;
+                    valueArray[count] = y;
+                    count++;
+                }
             }
             return valueArray;
         }
