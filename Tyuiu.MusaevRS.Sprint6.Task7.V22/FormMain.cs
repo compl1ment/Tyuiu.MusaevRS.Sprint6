@@ -15,20 +15,11 @@ namespace Tyuiu.MusaevRS.Sprint6.Task7.V22
 
     public partial class FormMain : Form
     {
+        static string openFilePath;
+        static int rows;
+        static int colums;
         DataService ds = new DataService();
-        public static int[,] LoadFromFileData(string filePath)
-        {
-            string fileData = File.ReadAllText(filePath);
-            int[,] valueArray = 
-            for (int i = 0; i < rows; i++)
-            {
-                if ((valueArray[i, 6] % 2 == 0) && (valueArray[i, 6] > 0))
-                {
-                    valueArray[i, 6] = 111;
-                }
-            }
-            return valueArray;
-        }        
+          
         public FormMain()
         {
             InitializeComponent();
@@ -49,14 +40,13 @@ namespace Tyuiu.MusaevRS.Sprint6.Task7.V22
             openFileDialogTask.ShowDialog();
             openFilePath = openFileDialogTask.FileName;
 
-            int[,] valueArray = new int[rows, colums];
+            int[,] valueArray = ds.GetMatrix(openFilePath);
 
-            valueArray = LoadFromFileData(openFilePath);
 
-            dataGridViewInPut.RowCount = rows;
-            dataGridViewInPut.ColumnCount = colums;
-            dataGridViewOutPut.ColumnCount = colums;
-            dataGridViewOutPut.RowCount = rows;
+            dataGridViewInPut.RowCount = valueArray.GetLength(0);
+            dataGridViewInPut.ColumnCount = valueArray.GetLength(1);
+            dataGridViewOutPut.ColumnCount = valueArray.GetLength(0);
+            dataGridViewOutPut.RowCount = valueArray.GetLength(1);
 
             for (int i = 0; i < colums;i++)
             {
@@ -64,27 +54,32 @@ namespace Tyuiu.MusaevRS.Sprint6.Task7.V22
                 dataGridViewOutPut.Columns[i].Width = 25;
             }
 
-            for (int r = 0; r < 0; r++)
+            for (int r = 0; r < valueArray.GetLength(0); r++)
             {
-                for (int c = 0; c > colums; c++)
+                for (int c = 0; c < valueArray.GetLength(1); c++)
                 {
                     dataGridViewInPut.Rows[r].Cells[c].Value = valueArray[r, c];
                 }
             }
-            valueArray = ds.GetMatrix(openFilePath);
             buttonDone.Enabled = true;
         }
 
         private void buttonDone_Click(object sender, EventArgs e)
         {
-            int[,] valueArray = new int[rows, colums];
-            valueArray = ds.GetMatrix(openFilePath);
-
-            for (int r = 0; r < 0; r++)
+            string path = openFilePath;
+            int[,] valueArray = ds.GetMatrix(path);
+            for (int r = 0; r < dataGridViewOutPut.RowCount; r++)
             {
-                for (int c = 0; c > colums; c++)
+                for (int c = 0; c < dataGridViewOutPut.ColumnCount; c++)
                 {
-                    dataGridViewOutPut.Rows[r].Cells[c].Value = valueArray[r, c];
+                    if ((c == 5) && (valueArray[r, c] > 0) && (valueArray[r, c] % 2 == 0))
+                    {
+                        dataGridViewOutPut.Rows[r].Cells[c].Value = 111;
+                    }
+                    else
+                    {
+                        dataGridViewOutPut.Rows[r].Cells[c].Value = valueArray[r, c];
+                    }
                 }
             }
             buttonSave.Enabled = true;
@@ -124,6 +119,11 @@ namespace Tyuiu.MusaevRS.Sprint6.Task7.V22
                 File.AppendAllText(path, str + Environment.NewLine);
                 str = "";
             }
+        }
+
+        private void buttonHelp_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

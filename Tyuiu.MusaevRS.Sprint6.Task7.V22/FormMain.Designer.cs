@@ -120,6 +120,7 @@ namespace Tyuiu.MusaevRS.Sprint6.Task7.V22
             this.buttonHelp.Size = new System.Drawing.Size(94, 54);
             this.buttonHelp.TabIndex = 2;
             this.buttonHelp.UseVisualStyleBackColor = false;
+            this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
             // 
             // buttonSave
             // 
